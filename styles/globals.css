@@ -10,6 +10,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+header {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -19,12 +23,12 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: white;
   }
 }
