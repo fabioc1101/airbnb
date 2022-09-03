@@ -9,6 +9,7 @@ function SmallCard({img, location, distance}) {
             <Image className="rounded-lg"
                 src={img}
                 layout="fill"
+                alt=''
             />
         </div>
 

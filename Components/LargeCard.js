@@ -9,6 +9,7 @@ function LargeCard({ img, title, description, buttonText}) {
          src={img}
          layout="fill"
          objectFit='cover'
+         alt=''
          />
        </div>
 
