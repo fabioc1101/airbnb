@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Header from '../components/Header.js'
+import Header from '../Components/Header.js'
 import Banner from '../Components/Banner.js'
 import styles from '../styles/Home.module.css'
 import SmallCard from '../Components/SmallCard.js'
