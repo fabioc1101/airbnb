@@ -4,8 +4,11 @@ import Header from '../components/Header.js'
 import Banner from '../Components/Banner.js'
 import styles from '../styles/Home.module.css'
 import SmallCard from '../Components/SmallCard.js'
+import MediumCard from '../Components/MediumCard.js'
+import LargeCard from '../Components/LargeCard.js'
+import Footer from '../Components/Footer.js'
 
-export default function Home({exploreData}) {
+export default function Home({exploreData, cardsData}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +19,7 @@ export default function Home({exploreData}) {
 
       <Header />
       <Banner />
-      <main className='max-w-7xl mx-auto px-8 sm:px-16'>
+      <main className='max-w-6xl mx-auto px-12 sm:px-16'>
         <section className='pt-6'>
           <h2 className='text-4xl font-semibold pb-5'>Explore Nearby</h2>
           
@@ -34,9 +37,30 @@ export default function Home({exploreData}) {
         </section>
 
         <section>
-          <h2>Live Anywhere</h2>
+          <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2>
+          {/* pull data from API endpoints */}
+          <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
+            {cardsData?.map(({ img, title }) => (
+              <MediumCard
+              key={img}
+              img={img}
+              title={title}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <LargeCard
+            img="https://links.papareact.com/4cj"
+            title="The Greatest Outdoors"
+            description="Wishlist curated by Airbnb"
+            buttonText="Get Inspired"
+          />
         </section>
       </main>
+
+      <Footer />
     </div>
   )
 }
@@ -46,10 +70,16 @@ export async function getStaticProps() {
   .then (
     (res) => res.json()
   );
+
+  const cardsData = await fetch('https://links.papareact.com/zp1')
+  .then (
+    (res) => res.json()
+  );
   
   return{
     props: {
       exploreData,
+      cardsData,
     },
   };
 }
