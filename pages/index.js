@@ -7,8 +7,10 @@ import SmallCard from '../Components/SmallCard.js'
 import MediumCard from '../Components/MediumCard.js'
 import LargeCard from '../Components/LargeCard.js'
 import Footer from '../Components/Footer.js'
+import exploreData from '../files/smallCard.JSON'
+import cardsData from '../files/mediumCards.JSON'
 
-export default function Home({exploreData, cardsData}) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -37,7 +39,7 @@ export default function Home({exploreData, cardsData}) {
         </section>
 
         <section>
-          <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2>
+          <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2> 
           {/* pull data from API endpoints */}
           <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
             {cardsData?.map(({ img, title }) => (
@@ -48,7 +50,7 @@ export default function Home({exploreData, cardsData}) {
               />
             ))}
           </div>
-        </section>
+        </section> 
 
         <section>
           <LargeCard
@@ -65,21 +67,23 @@ export default function Home({exploreData, cardsData}) {
   )
 }
 
-export async function getStaticProps() {
-  const exploreData = await fetch('https://links.papareact.com/pyp')
-  .then (
-    (res) => res.json()
-  );
+// Original Code to map over online stored json file using serverside rendering but link not active anymore
 
-  const cardsData = await fetch('https://links.papareact.com/zp1')
-  .then (
-    (res) => res.json()
-  );
+// export async function getStaticProps() {
+//   const exploreData = fetch('../JSON_files/smallCard.JSON')
+//   .then (
+//     (res) => res.json()
+//   );
+
+  // const cardsData = await fetch('https://links.papareact.com/zp1')
+  // .then (
+  //   (res) => res.json()
+  // );
   
-  return{
-    props: {
-      exploreData,
-      cardsData,
-    },
-  };
-}
+//   return{
+//     props: {
+//       exploreData,
+//       // cardsData,
+//     },
+//   };
+// }

@@ -1,0 +1,51 @@
+[
+    {
+        "key": 1,
+        "img": "https://links.papareact.com/xqj",
+        "location": "Private Room in the center of London",
+        "title": "Stay at this spacious Edwardian House",
+        "description": "1 guest Ā- 1 bedroom Ā- 1 bed Ā- 1.5 shared bathrooms Ā- WIFI Ā- Kitchen Ā- Free parking Ā- Washing machine",
+        "star": 4.73,
+        "price": "Ā$30 / night",
+        "total": "Ā$117 total",
+        "long": -0.0022275,
+        "lat": 51.5421655
+    },
+    {
+        "key": 2,
+        "img": "https://links.papareact.com/hz2",
+        "location": "Private Room in the center of London",
+        "title": "Independent luxury studio apartment",
+        "description": "2 guests Ā- 3 bedroom Ā- 1 bed Ā- 1.5 shared bathrooms Ā- WIFI Ā- Kitchen Ā- Free parking Ā- Washing machine",
+        "star": 4.3,
+        "price": "Ā$40 / night",
+        "total": "Ā$157 total",
+        "long": -0.095091,
+        "lat": 51.48695
+    },
+    {
+        "key": 3,
+        "img": "https://links.papareact.com/uz7",
+        "location": "Private Room in the center of London",
+        "title": "London Studio Apartments",
+        "description": "4 guests Ā- 4 bedroom Ā- 4 bed Ā- 2 bathrooms Ā- WIFI Ā- Kitchen Ā- Free parking Ā- Washing machine",
+        "star": 3.8,
+        "price": "Ā$35 / night",
+        "total": "Ā$207 total",
+        "long": -0.135638,
+        "lat": 51.521916
+    },
+    {
+        "key": 4,
+        "img": "https://links.papareact.com/6as",
+        "location": "Private Room in the center of London",
+        "title": "S30 mins to Oxford Street, Excel London",
+        "description": "1 guest Ā- 1 bedroom Ā- 1 bed Ā- 1.5 shared bathrooms Ā- WIFI Ā- Kitchen Ā- Free parking Ā- Washing machine",
+        "star": 4.1,
+        "price": "Ā$55 / night",
+        "total": "Ā$320 total",
+        "long": -0.069961,
+        "lat": 51.472618
+    }
+   
+]
