@@ -11,6 +11,7 @@ function InfoCard({ img, description, location, star, price, total, title, long,
                 layout='fill'
                 objectFit='cover'
                 className='rounded-2xl'
+                alt='Picture of Listing'
             />
         </div>
         <div className='flex flex-col flex-grow pl-5'>
