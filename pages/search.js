@@ -64,7 +64,7 @@ function Search() {
 }
 
 export default Search;
-
+// Implementing Server side rendering which was not completely possible because file on server was not available and I had to write JSON myself
 // export async function getServerSideProps(){
 //     const searchResults = await (await fetch ("https://links.papareact.com/isz")).then(res => res.json());
     
