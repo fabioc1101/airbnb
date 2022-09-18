@@ -8,6 +8,7 @@ import { DateRangePicker } from 'react-date-range';
 import { useRouter } from 'next/dist/client/router';
 
 
+
 function Header({placeholder}) {
 
     const [searchInput, setSearchInput] = useState("");
