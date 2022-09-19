@@ -25,6 +25,8 @@ function Header({placeholder}) {
     const handleSelect = (ranges) => {
         setStartDate(ranges.selection.startDate); 
         setEndDate(ranges.selection.endDate);
+        console.log(startDate);
+        console.log(endDate);
         };
     
     
@@ -37,13 +39,13 @@ function Header({placeholder}) {
            pathname: '/search',
             query: {
                 location: searchInput,
-                startDate: startDate.toISOString(),
-                endDate: endDate.toISOString(),
+                startDate: startDate.toLocaleDateString(),
+                endDate: endDate.toLocaleDateString(),
                 noOfGuests,
             }
-        });
+        }); 
     }
-
+    console.log(startDate);
   return (
     <header className='sticky top-0 z-50 grid grid-cols-3 bg-white my-0 shadow-md p-5 w-full md:px-10'>
         <div onClick={() => router.push("/")} className="relative flex items-center h-10 cursor-pointer my-auto">
