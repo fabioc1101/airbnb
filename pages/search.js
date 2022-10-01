@@ -5,6 +5,7 @@ import { useRouter } from 'next/dist/client/router'
 import {format} from 'date-fns'
 import InfoCard from '../components/InfoCard'
 import searchResults from '../files/searchResults.JSON'
+import Map from '../components/Map'
 
 
 
@@ -59,6 +60,10 @@ function Search() {
                         ))}
                     </div>
                     
+                </section>
+
+                <section className='hidden lg:inline-flex flex-grow'>
+                    <Map searchResults={searchResults} />
                 </section>
             </main>
 
