@@ -5,6 +5,7 @@ import { useRouter } from 'next/dist/client/router'
 import {format} from 'date-fns'
 import InfoCard from '../components/InfoCard'
 import searchResults from '../files/searchResults.JSON'
+import Map from '../components/Map'
 
 
 
@@ -14,10 +15,14 @@ function Search() {
 
   //ES6 destructuring
     const { location, startDate, endDate, noOfGuests} = router.query;
-    const formattedStartDate = format(new Date(startDate), "MM/dd/yy");
-    const formattedEndDate = format(new Date(endDate), "MM/dd/yyyy");
-    const range = `${formattedStartDate} - ${formattedEndDate}`;
+    const formattedStartDate = startDate ? format(new Date(startDate), "MM/dd/yyyy") : "";
+    const formattedEndDate = endDate ? format(new Date(endDate), "MM/dd/yyyy") : "";
 
+    //Different Approach tested but not working
+    // const formattedStartDate = `${new Date(startDate.getMonth)}/${new Date(startDate.getDate)}/${new Date(startDate.getFullYear)}`;
+    // const formattedEndDate = `${new Date(endDate.getMonth)}/${new Date(endDate.getDate)}/${new Date(endDate.getFullYear)}`;
+    const range = `${formattedStartDate} - ${formattedEndDate}`;
+    
 
 
     return (
@@ -55,6 +60,10 @@ function Search() {
                         ))}
                     </div>
                     
+                </section>
+
+                <section className='hidden lg:inline-flex flex-grow'>
+                    <Map searchResults={searchResults} />
                 </section>
             </main>
 

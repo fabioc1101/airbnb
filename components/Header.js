@@ -8,6 +8,7 @@ import { DateRangePicker } from 'react-date-range';
 import { useRouter } from 'next/dist/client/router';
 
 
+
 function Header({placeholder}) {
 
     const [searchInput, setSearchInput] = useState("");
@@ -36,11 +37,11 @@ function Header({placeholder}) {
            pathname: '/search',
             query: {
                 location: searchInput,
-                startDate: startDate.toISOString(),
-                endDate: endDate.toISOString(),
+                startDate: startDate.toLocaleDateString(),
+                endDate: endDate.toLocaleDateString(),
                 noOfGuests,
             }
-        });
+        }); 
     }
 
   return (
