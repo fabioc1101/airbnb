@@ -15,8 +15,8 @@ function Search() {
 
   //ES6 destructuring
     const { location, startDate, endDate, noOfGuests} = router.query;
-    const formattedStartDate = format(new Date(startDate), "MM/dd/yyyy");
-    const formattedEndDate = format(new Date(endDate), "MM/dd/yyyy");
+    const formattedStartDate = startDate ? format(new Date(startDate), "MM/dd/yyyy") : "";
+    const formattedEndDate = endDate ? format(new Date(endDate), "MM/dd/yyyy") : "";
 
     //Different Approach tested but not working
     // const formattedStartDate = `${new Date(startDate.getMonth)}/${new Date(startDate.getDate)}/${new Date(startDate.getFullYear)}`;
