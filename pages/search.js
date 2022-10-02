@@ -17,10 +17,6 @@ function Search() {
     const { location, startDate, endDate, noOfGuests} = router.query;
     const formattedStartDate = startDate ? format(new Date(startDate), "MM/dd/yyyy") : "";
     const formattedEndDate = endDate ? format(new Date(endDate), "MM/dd/yyyy") : "";
-
-    //Different Approach tested but not working
-    // const formattedStartDate = `${new Date(startDate.getMonth)}/${new Date(startDate.getDate)}/${new Date(startDate.getFullYear)}`;
-    // const formattedEndDate = `${new Date(endDate.getMonth)}/${new Date(endDate.getDate)}/${new Date(endDate.getFullYear)}`;
     const range = `${formattedStartDate} - ${formattedEndDate}`;
     
 
@@ -62,7 +58,7 @@ function Search() {
                     
                 </section>
 
-                <section className='hidden lg:inline-flex flex-grow'>
+                <section className='hidden lg:inline-flex'>
                     <Map searchResults={searchResults} />
                 </section>
             </main>

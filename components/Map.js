@@ -41,8 +41,8 @@ function Map() {
                     <Marker
                         longitude={result.long}
                         latitude={result.lat}
-                        offsetLeft={-0.2}
-                        offsetTop={-0.1}
+                        // offsetLeft={-0.2}
+                        // offsetTop={-0.1}
                     >
                         <p onClick={() => setSelectedLocation(result)} 
                             className='cursor-pointer text-2xl animate-bounce'
